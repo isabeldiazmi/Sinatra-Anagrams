@@ -2,9 +2,9 @@
 
 <% if @new_word %>
   <p>Estos son anagramas para '<%= @new_word %>':</p>
-  <p># Aqui deberás enlistar todos los anagramas</p>
+  <% @anagrams.each do |anagram| %>
+   <p> <%=anagram.palabras %> </p>
+   <% end %>
 <% end %>
 
-<!-- con '<% y %>' hago codigo de ruby en html
-	con '<%= ... %>' inserto el codigo de ruby en html-->
-
+ <%= erb :_new_form, :layout => false%>

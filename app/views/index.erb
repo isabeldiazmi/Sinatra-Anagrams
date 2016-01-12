@@ -4,9 +4,4 @@
     <p>Palabra: "<span id="new_word"><%= @new_word %></span>"</p>
   <% end %>
 
-  <form action="/new_word" method="post">
-    Nueva palabra:
-    <br>
-    <input type="text" name="user_word">
-    <input type="submit" value="New!">
-  </form>
+<%= erb :_new_form, :layout => false %>
